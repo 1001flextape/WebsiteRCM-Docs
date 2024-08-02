@@ -1,0 +1,12 @@
+site_name: WebsiteRCM Documentation
+nav:
+  - Home: index.md
+  # - WebsiteRCM:
+      # - Introduction: website-rcm/introduction.md
+      # - Getting Started: website-rcm/getting-started.md
+      # - Features: website-rcm/features.md
+  - WebsiteRCM Stamper:
+      - Component Plugin: website-rcm-stamper/component-plugin.md
+
+theme:
+  name: material
