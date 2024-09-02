@@ -133,3 +133,439 @@ WebsiteRCM consists of three things working together:
 ## The JSON file
 
 The JSON file is built by listing the data selection options you want to see on the left-hand menu. These options are selected in a real-time environment and try to persist as long as possible, but they can be overwritten.
+
+
+
+
+The JSON defines the left hand menu in the menu property.
+
+```JSON
+{
+  "menu": []
+}
+```
+
+#### CONTAINER:V1
+
+Inside the menu is an array of containers.
+
+```JSON
+{
+  "menu": [
+    {
+      "data": [],
+      "type": "CONTAINER:V1",
+      "header": "Notice",
+      "isShowing": {
+        "prop": "isNoticeShowing"
+      }
+    },
+  ]
+}
+```
+
+|Property|type|Required|Meaning|
+|---|---|---|---|
+|data|array| true | This will hold the inputs for the users|
+|type|"CONTAINER:V1"| true |This is a container, this is the type for the container|
+|header|string| true | These are the words on top of the container to help the user ID what the container is for |
+|isShowing|Object.prop| false| This creates a switch for the user to toggle on and off the region the container is for in the component. Similar to highlighting but can also be used to turn off regions in the component. |
+
+<br />
+<br />
+
+### Container data[]
+
+#### TEXTFIELD:V1
+
+|Property|type|Required|Meaning|
+|---|---|---|---|
+|prop|string| true | This is the name of the property attached to the props.data.user object that is injected into the react component. |
+|type|"TEXTFIELD:V1"| true |This is a Textfield |
+|label|string| false | The label for the text field. |
+|placeholder|string| false| The placeholder example text in the textfield. |
+|defaultValue|string|false| The data loaded in the textfield. |
+
+```JSON
+{
+  "menu": [
+    {
+      "data": [{
+        "prop": "textFieldProp",
+        "type": "TEXTFIELD:V1",
+        "label": "Example Title",
+        "placeholder": "Example Placeholder",
+        "defaultValue": "This is default text."
+      }],
+      "type": "CONTAINER:V1",
+      "header": "Example",
+      "isShowing": {
+        "prop": "isExampleShowing"
+      }
+    },
+  ]
+}
+```
+
+What this would look like in the react component:
+
+```JSX
+import React from 'react';
+
+function PropExample(props) {
+  
+  const { user, system } = props;
+
+  return <p>{user.textFieldProp}</p>
+}
+
+export default PropExample
+
+
+```
+
+#### LINK_SELECTION:V1
+
+#### COLOR_SELECTION:V1
+
+#### SWITCH:V1
+
+
+
+<!--
+
+
+``` json
+{
+  "menu": [
+    {
+      "data": [
+        {
+          "prop": "noticeTitle",
+          "type": "TEXTFIELD:V1",
+          "label": "Title",
+          "placeholder": "Important notice goes here."
+        },
+        {
+          "prop": "noticeLink",
+          "type": "LINK_SELECTION:V1",
+          "label": "Link"
+        },
+        {
+          "prop": "noticeColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(228, 228, 231)",
+            "suggestedTextColor": "DARK"
+          }
+        },
+        {
+          "prop": "noticeColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(39, 39, 42)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Notice",
+      "isShowing": {
+        "prop": "isNoticeShowing"
+      }
+    },
+    {
+      "data": [
+        {
+          "prop": "navColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(168, 162, 158)",
+            "suggestedTextColor": "DARK"
+          }
+        },
+        {
+          "prop": "navColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(77, 77, 77)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Navigation Bar",
+      "isShowing": {
+        "prop": "isNavShowing"
+      }
+    },
+    {
+      "data": [
+        {
+          "prop": "isLogoShowing",
+          "type": "SWITCH:V1",
+          "label": "Show Logo",
+          "defaultValue": true
+        },
+        {
+          "prop": "logo",
+          "type": "MEDIA_SELECTION:V1",
+          "label": "Logo",
+          "fileFilter": [
+            "images"
+          ]
+        },
+        {
+          "prop": "isBrandTextShowing",
+          "type": "SWITCH:V1",
+          "label": "Show Text",
+          "defaultValue": true
+        },
+        {
+          "prop": "brandText",
+          "type": "TEXTFIELD:V1",
+          "label": "Text",
+          "placeholder": "Your Brand"
+        },
+        {
+          "prop": "brandLink",
+          "type": "LINK_SELECTION:V1",
+          "label": "Link"
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Branding",
+      "isShowing": {
+        "prop": "isBrandShowing"
+      }
+    },
+    {
+      "data": [
+        {
+          "prop": "isFacebookShowing",
+          "type": "SWITCH:V1",
+          "label": "Show Facebook",
+          "isShowing": "organization.hasFacebook"
+        },
+        {
+          "prop": "isXShowing",
+          "type": "SWITCH:V1",
+          "label": "Show 𝕏",
+          "isShowing": "organization.hasX"
+        },
+        {
+          "prop": "isInstagramShowing",
+          "type": "SWITCH:V1",
+          "label": "Show Instagram",
+          "isShowing": "organization.hasInstagram"
+        },
+        {
+          "prop": "isLinkedInShowing",
+          "type": "SWITCH:V1",
+          "label": "Show LinkedIn",
+          "isShowing": "organization.hasLinkedIn"
+        },
+        {
+          "prop": "isYoutubeShowing",
+          "type": "SWITCH:V1",
+          "label": "Show FacebookYoutube",
+          "isShowing": "organization.hasYoutube"
+        },
+        {
+          "prop": "isPinterestShowing",
+          "type": "SWITCH:V1",
+          "label": "Show Pinterest",
+          "isShowing": "organization.hasPinterest"
+        },
+        {
+          "prop": "issocialWhatsappShowing",
+          "type": "SWITCH:V1",
+          "label": "Show socialWhatsapp",
+          "isShowing": "organization.hassocialWhatsapp"
+        },
+        {
+          "prop": "isRedditShowing",
+          "type": "SWITCH:V1",
+          "label": "Show Reddit",
+          "isShowing": "organization.hasReddit"
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Social",
+      "isShowing": {
+        "prop": "isSocialShowing"
+      }
+    },
+    {
+      "data": [
+        {
+          "prop": "dayNightSelectorColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Drop Down",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(120, 113, 108)",
+            "suggestedTextColor": "DARK"
+          }
+        },
+        {
+          "prop": "dayNightSelectorColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Drop Down",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(87, 83, 78)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Day/Night Selector",
+      "isShowing": {
+        "prop": "isDayNightSelectorShowing"
+      }
+    },
+    {
+      "data": [
+        {
+          "prop": "callToActionTitle",
+          "type": "TEXTFIELD:V1",
+          "label": "Title",
+          "placeholder": "Contact"
+        },
+        {
+          "prop": "callToActionLink",
+          "type": "LINK_SELECTION:V1",
+          "label": "Go To"
+        },
+        {
+          "prop": "callToActionColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Button Color",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(228, 228, 231)",
+            "suggestedTextColor": "DARK"
+          }
+        },
+        {
+          "prop": "callToActionColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Button Color",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(39, 39, 42)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Call To Action",
+      "isShowing": {
+        "prop": "isCallToActionShowing"
+      }
+    },
+    {
+      "data": [
+        {
+          "prop": "linkBoxColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(120, 113, 108)",
+            "suggestedTextColor": "LIGHT"
+          }
+        },
+        {
+          "prop": "linkBoxColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(120, 113, 108)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Link Boxes",
+      "isShowing": {
+        "prop": "isLinkBoxShowing"
+      }
+    }
+  ]
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "data": [
+        {
+          "prop": "noticeTitle",
+          "type": "TEXTFIELD:V1",
+          "label": "Title",
+          "placeholder": "Important notice goes here."
+        },
+        {
+          "prop": "noticeLink",
+          "type": "LINK_SELECTION:V1",
+          "label": "Link"
+        },
+        {
+          "prop": "noticeColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(228, 228, 231)",
+            "suggestedTextColor": "DARK"
+          }
+        },
+        {
+          "prop": "noticeColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(39, 39, 42)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Notice",
+      "isShowing": {
+        "prop": "isNoticeShowing"
+      }
+    }, -->

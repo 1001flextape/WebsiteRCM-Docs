@@ -1,4 +1,9 @@
-# Welcome to MkDocs
+# Welcome to the RCM Project
+
+Welcome to the RCM project! This is a new technology designed specifically for React components, aiming to make them more reusable and dynamic. With RCM, you can easily manage and configure React components, enabling a more flexible and scalable approach to building your applications.
+
+
+<!-- # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
@@ -14,4 +19,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        ...       # Other markdown pages, images and other files. -->

@@ -1,6 +1,7 @@
 site_name: WebsiteRCM Documentation
 nav:
   - Home: index.md
+  - What is an RCM?: what-is-an-rcm.md
   # - WebsiteRCM:
       # - Introduction: website-rcm/introduction.md
       # - Getting Started: website-rcm/getting-started.md
