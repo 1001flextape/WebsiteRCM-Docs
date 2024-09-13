@@ -7,13 +7,13 @@
 
 A **Content Management System (CMS)** typically operates with a separate layer for JSON data and another separate layer for the React component. This separation means that the JSON data is used to populate the React component, but the component's structure remains relatively fixed. It takes two systems using react to create a website.
 
-<img src="./images/large-rcm-vs-cms.png" alt="CMS vs RCM" style="width: 100%;" />
+<img src="https://1001flextape.github.io/WebsiteRCM-Docs/images/large-rcm-vs-cms.png" alt="CMS vs RCM" style="width: 100%;" />
 
 ### The RCM advantage
 
 The **React Component Manager** will use only one JSON file and one React component. Your tech debt for your website is as small as it can get. The RCM is built for business includes real-time collaboration, user roles, and navigation. This allows for the website to be reusable. Instead of rebuilding a new website, you can change the components and order of the components and pages of the components.
 
-<img src="./images/just-rcm.png" alt="CMS vs RCM" style="width: 100%;" />
+<img src="https://1001flextape.github.io/WebsiteRCM-Docs/images/just-rcm.png" alt="CMS vs RCM" style="width: 100%;" />
 
 
 ## RCM life cycle
@@ -22,7 +22,7 @@ The **React Component Manager** will use only one JSON file and one React compon
 2) The user enters the data into the form. <br />
 3) The answers from the user are used as props in the React component. <br />
 
-<img src="./images/rcm-life-cycle.png" alt="CMS vs RCM" style="width: 100%;" />
+<img src="https://1001flextape.github.io/WebsiteRCM-Docs/images/rcm-life-cycle.png" alt="CMS vs RCM" style="width: 100%;" />
 
 <!-- 
 ### What is a RCM
