@@ -15,6 +15,6 @@ theme:
 
 extra_javascript:
   - https://www.googletagmanager.com/gtag/js?id=G-69Y4XFCKHB
-  - ./scripts/load-google-analytics.js
+  - https://1001flextape.github.io/WebsiteRCM-Docs/scripts/load-google-analytics.js
   
   
