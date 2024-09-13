@@ -36,7 +36,7 @@ The RCM project is created from two apps working together. One app is for the bu
 | Meeting Mode                  | Users can group up and stay on the same page. The leader changes pages, and everyone follows.      |
 | SCRUM                         | Introducing programming SCRUM to business analysts with "Real-time Collaboration" + "Meeting Mode."|
 | Data Warehousing              | Watch your app's progress, and dig into past data. Never lose your data when updating your website.|
-| Red/Green Status Circles      | Simplifies the learning curve. Red means you need to keep working, green means that section is ready. |
+| Red/Green Status Circles      | Simplifies the learning curve. Red means you need to keep working, green means that section is ready. This feature enhances situational awareness so you can make better business decisions. |
 | Day/Night Mode                | An optional feature allowing users to switch between light and dark modes on the website.         |
 | Customization                 | Easily plug in your updates.                                                                     |
 | User Roles                    | Grant or deny access to specific parts of the web app.                                            |
