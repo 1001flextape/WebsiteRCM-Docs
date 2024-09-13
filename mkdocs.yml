@@ -1,4 +1,4 @@
-site_name: WebsiteRCM Documentation
+site_name: Project RCM Documentation
 nav:
   - Home: index.md
   - What is an RCM?: what-is-an-rcm.md
@@ -6,8 +6,8 @@ nav:
       # - Introduction: website-rcm/introduction.md
       # - Getting Started: website-rcm/getting-started.md
       # - Features: website-rcm/features.md
-  - WebsiteRCM Stamper:
-      - Component Plugin: website-rcm-stamper/component-plugin.md
+  # - WebsiteRCM Stamper:
+  #     - Component Plugin: website-rcm-stamper/component-plugin.md
 
 theme:
   name: material
