@@ -1,0 +1,1113 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Component Plugins - Project RCM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#component-plugins" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Project RCM Documentation" class="md-header__button md-logo" aria-label="Project RCM Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Project RCM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Component Plugins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Project RCM Documentation" class="md-nav__button md-logo" aria-label="Project RCM Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Project RCM Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-is-an-rcm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is an RCM?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#component-creation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Creation Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Creation Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propsdatasystemstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      props.data.system.state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propsdatasystemstate_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      props.data.system.state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propsdatasystemsetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      props.data.system.setting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propsdatauser" class="md-nav__link">
+    <span class="md-ellipsis">
+      props.data.user
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-json-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The JSON file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The JSON file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containerv1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTAINER:V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container data[]
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Container data[]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textfieldv1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXTFIELD:V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link_selectionv1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINK_SELECTION:V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color_selectionv1" class="md-nav__link">
+    <span class="md-ellipsis">
+      COLOR_SELECTION:V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switchv1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SWITCH:V1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="component-plugins">Component Plugins</h1>
+<p>This documentation is about creating a plugin in the WebsiteRCM application. This application is known as a React Component Manager, similar to a CMS (Content Management System) for React components.</p>
+<p><em>Tip:</em> Think React.js without frameworks, so no JavaScript framework or CSS framework.</p>
+<p><em>Tip:</em> You should modularize all CSS in each component you create.</p>
+<p><br /><br /><br /></p>
+<h2 id="component-creation-instructions">Component Creation Instructions</h2>
+<p>A component is built with two things working together:
+1. A React component
+2. A JSON file that creates the left-hand menu and the <code>props.data.user</code> object.</p>
+<hr />
+<p>Every React component you create will be injected with the following props:</p>
+<pre><code class="language-jsx">import React from 'react';
+
+function PropExample(props) {
+
+  const { user, system } = props.data;
+  const {
+    // env
+    isDisplayMode,
+    isFunctionalMode,
+    isDevMode,
+    isProdMode,
+    // colors
+    isDayMode,
+    isNightMode,
+  } = system.state
+
+  const {
+    column,
+  } = system.setting
+
+  return &lt;p&gt;Prop Example&lt;/p&gt;
+}
+
+export default PropExample
+
+</code></pre>
+<p><br />
+<br /></p>
+<h3 id="propsdatasystemstate">props.data.system.state</h3>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>type</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isDisplayMode</td>
+<td>boolean</td>
+<td>If true, it is the pretty version that is selected by the user. the developer controls the content.</td>
+</tr>
+<tr>
+<td>isFunctionalMode</td>
+<td>boolean</td>
+<td>This means the user should control the content. If this is true, it means that one of the following properties is true: isDevMode or isProdMode.</td>
+</tr>
+<tr>
+<td>isDevMode</td>
+<td>boolean</td>
+<td>This means it is in the portal being edited.</td>
+</tr>
+<tr>
+<td>isProdMode</td>
+<td>boolean</td>
+<td>It has been published and is on the front website.</td>
+</tr>
+<tr>
+<td>isDayMode</td>
+<td>boolean</td>
+<td>It means brighter colors are being selected</td>
+</tr>
+<tr>
+<td>isNightMode</td>
+<td>boolean</td>
+<td>It means darker colors are being selected</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p><em>Tip:</em> If display mode is on, functionality mode is off. And if functionality mode is on, display mode is off. This could have been an enum, but this would be an extra thing to remember when simplicity is the goal. So instead of being an enum, both of these properties can not be false or true at the same time, one is true and the other is false.</p>
+<p><em>Tip:</em> If functionality mode is on, that means dev or production is on. Dev and prod mode will not be on at the same time.</p>
+<p><em>Tip:</em> If display mode is on, than functionality, dev, and production is off. </p>
+<p><em>Tip:</em> This data is always be available in every component you create.</p>
+<p><br />
+<br /></p>
+<h3 id="propsdatasystemstate_1"><code>props.data.system.state</code></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isDisplayMode</td>
+<td>boolean</td>
+<td>If true, it is the pretty version selected by the user. The developer controls the content.</td>
+</tr>
+<tr>
+<td>isFunctionalMode</td>
+<td>boolean</td>
+<td>This means the user controls the content. If this is true, one of the following properties is also true: isDevMode or isProdMode.</td>
+</tr>
+<tr>
+<td>isDevMode</td>
+<td>boolean</td>
+<td>This means it is in the portal being edited.</td>
+</tr>
+<tr>
+<td>isProdMode</td>
+<td>boolean</td>
+<td>It has been published and is on the front website.</td>
+</tr>
+<tr>
+<td>isDayMode</td>
+<td>boolean</td>
+<td>It means brighter colors are being selected.</td>
+</tr>
+<tr>
+<td>isNightMode</td>
+<td>boolean</td>
+<td>It means darker colors are being selected.</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p><em>Tip:</em> If display mode is on, functionality mode is off, and vice versa. This could have been an enum, but simplicity is the goal. Both properties cannot be true or false at the same time; one is true, and the other is false.</p>
+<p><em>Tip:</em> If functionality mode is on, either dev or production mode is on. Dev and prod mode will not be on at the same time.</p>
+<p><em>Tip:</em> If display mode is on, functionality, dev, and production modes are off.</p>
+<p><em>Tip:</em> This data will always be available in every component you create.</p>
+<p><br /><br /></p>
+<h3 id="propsdatasystemsetting"><code>props.data.system.setting</code></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>column</td>
+<td>string</td>
+<td>It is the max width of the component for large screens. It is best to center the div with <code>margin: 0 auto</code> to ensure your website looks great on bigger screens.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tip:</em> This data will always be available in every component you create.</p>
+<p><br /><br /></p>
+<h3 id="propsdatauser"><code>props.data.user</code></h3>
+<p>This is the data from the left-hand menu being injected into the props. It is called <code>props.data.user</code> because the data comes from the user in the editor. Each component has a different version of this, but components can use the same data.</p>
+<p><em>Tip:</em> The properties are not guaranteed to be there.</p>
+<p><em>Tip:</em> The JSON file determines the structure of this object. Once you understand the pattern, it will be very simple to use.</p>
+<p><em>Tip:</em> The designer uses TypeScript to match the type with the JSON to reduce errors.</p>
+<p><em>Tip:</em> If you build a component that uses the same JSON property names, you can swap out components.</p>
+<p><em>Tip:</em> Deleting a component doesn't mean you lose the user data (<code>props.data.user</code>). This allows a new upgraded component to be selected and the data transferred. Even if you delete the component first, the data will persist. You can override the property names, so try to pick unique property names per component unless you are trying to switch out components.</p>
+<p><em>Tip:</em> One user answer per left menu JSON file per React component.</p>
+<p><br /></p>
+<p>WebsiteRCM consists of three things working together:</p>
+<table>
+<thead>
+<tr>
+<th>Data Point</th>
+<th>Author</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The React component</td>
+<td>The programmer</td>
+</tr>
+<tr>
+<td>The left menu JSON file</td>
+<td>The programmer</td>
+</tr>
+<tr>
+<td>The answers from the left menu JSON file (user data)</td>
+<td>The business analyst</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<h2 id="the-json-file">The JSON file</h2>
+<p>The JSON file is built by listing the data selection options you want to see on the left-hand menu. These options are selected in a real-time environment and try to persist as long as possible, but they can be overwritten.</p>
+<p>The JSON defines the left hand menu in the menu property.</p>
+<pre><code class="language-JSON">{
+  &quot;menu&quot;: []
+}
+</code></pre>
+<h4 id="containerv1">CONTAINER:V1</h4>
+<p>Inside the menu is an array of containers.</p>
+<pre><code class="language-JSON">{
+  &quot;menu&quot;: [
+    {
+      &quot;data&quot;: [],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Notice&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isNoticeShowing&quot;
+      }
+    },
+  ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>type</th>
+<th>Required</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>array</td>
+<td>true</td>
+<td>This will hold the inputs for the users</td>
+</tr>
+<tr>
+<td>type</td>
+<td>"CONTAINER:V1"</td>
+<td>true</td>
+<td>This is a container, this is the type for the container</td>
+</tr>
+<tr>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>These are the words on top of the container to help the user ID what the container is for</td>
+</tr>
+<tr>
+<td>isShowing</td>
+<td>Object.prop</td>
+<td>false</td>
+<td>This creates a switch for the user to toggle on and off the region the container is for in the component. Similar to highlighting but can also be used to turn off regions in the component.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+<br /></p>
+<h3 id="container-data">Container data[]</h3>
+<h4 id="textfieldv1">TEXTFIELD:V1</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>type</th>
+<th>Required</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prop</td>
+<td>string</td>
+<td>true</td>
+<td>This is the name of the property attached to the props.data.user object that is injected into the react component.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>"TEXTFIELD:V1"</td>
+<td>true</td>
+<td>This is a Textfield</td>
+</tr>
+<tr>
+<td>label</td>
+<td>string</td>
+<td>false</td>
+<td>The label for the text field.</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>string</td>
+<td>false</td>
+<td>The placeholder example text in the textfield.</td>
+</tr>
+<tr>
+<td>defaultValue</td>
+<td>string</td>
+<td>false</td>
+<td>The data loaded in the textfield.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-JSON">{
+  &quot;menu&quot;: [
+    {
+      &quot;data&quot;: [{
+        &quot;prop&quot;: &quot;textFieldProp&quot;,
+        &quot;type&quot;: &quot;TEXTFIELD:V1&quot;,
+        &quot;label&quot;: &quot;Example Title&quot;,
+        &quot;placeholder&quot;: &quot;Example Placeholder&quot;,
+        &quot;defaultValue&quot;: &quot;This is default text.&quot;
+      }],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Example&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isExampleShowing&quot;
+      }
+    },
+  ]
+}
+</code></pre>
+<p>What this would look like in the react component:</p>
+<pre><code class="language-JSX">import React from 'react';
+
+function PropExample(props) {
+
+  const { user, system } = props;
+
+  return &lt;p&gt;{user.textFieldProp}&lt;/p&gt;
+}
+
+export default PropExample
+
+
+</code></pre>
+<h4 id="link_selectionv1">LINK_SELECTION:V1</h4>
+<h4 id="color_selectionv1">COLOR_SELECTION:V1</h4>
+<h4 id="switchv1">SWITCH:V1</h4>
+<!--
+
+
+
+<pre><code class="language-json">{
+  &quot;menu&quot;: [
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;noticeTitle&quot;,
+          &quot;type&quot;: &quot;TEXTFIELD:V1&quot;,
+          &quot;label&quot;: &quot;Title&quot;,
+          &quot;placeholder&quot;: &quot;Important notice goes here.&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;noticeLink&quot;,
+          &quot;type&quot;: &quot;LINK_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Link&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;noticeColorDay&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Background&quot;,
+          &quot;isShowing&quot;: &quot;isDayMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(228, 228, 231)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;DARK&quot;
+          }
+        },
+        {
+          &quot;prop&quot;: &quot;noticeColorNight&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Background&quot;,
+          &quot;isShowing&quot;: &quot;isNightMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(39, 39, 42)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;LIGHT&quot;
+          }
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Notice&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isNoticeShowing&quot;
+      }
+    },
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;navColorDay&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Background&quot;,
+          &quot;isShowing&quot;: &quot;isDayMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(168, 162, 158)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;DARK&quot;
+          }
+        },
+        {
+          &quot;prop&quot;: &quot;navColorNight&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Background&quot;,
+          &quot;isShowing&quot;: &quot;isNightMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(77, 77, 77)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;LIGHT&quot;
+          }
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Navigation Bar&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isNavShowing&quot;
+      }
+    },
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;isLogoShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show Logo&quot;,
+          &quot;defaultValue&quot;: true
+        },
+        {
+          &quot;prop&quot;: &quot;logo&quot;,
+          &quot;type&quot;: &quot;MEDIA_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Logo&quot;,
+          &quot;fileFilter&quot;: [
+            &quot;images&quot;
+          ]
+        },
+        {
+          &quot;prop&quot;: &quot;isBrandTextShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show Text&quot;,
+          &quot;defaultValue&quot;: true
+        },
+        {
+          &quot;prop&quot;: &quot;brandText&quot;,
+          &quot;type&quot;: &quot;TEXTFIELD:V1&quot;,
+          &quot;label&quot;: &quot;Text&quot;,
+          &quot;placeholder&quot;: &quot;Your Brand&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;brandLink&quot;,
+          &quot;type&quot;: &quot;LINK_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Link&quot;
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Branding&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isBrandShowing&quot;
+      }
+    },
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;isFacebookShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show Facebook&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasFacebook&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;isXShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show 𝕏&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasX&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;isInstagramShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show Instagram&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasInstagram&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;isLinkedInShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show LinkedIn&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasLinkedIn&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;isYoutubeShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show FacebookYoutube&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasYoutube&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;isPinterestShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show Pinterest&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasPinterest&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;issocialWhatsappShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show socialWhatsapp&quot;,
+          &quot;isShowing&quot;: &quot;organization.hassocialWhatsapp&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;isRedditShowing&quot;,
+          &quot;type&quot;: &quot;SWITCH:V1&quot;,
+          &quot;label&quot;: &quot;Show Reddit&quot;,
+          &quot;isShowing&quot;: &quot;organization.hasReddit&quot;
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Social&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isSocialShowing&quot;
+      }
+    },
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;dayNightSelectorColorDay&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Drop Down&quot;,
+          &quot;isShowing&quot;: &quot;isDayMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(120, 113, 108)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;DARK&quot;
+          }
+        },
+        {
+          &quot;prop&quot;: &quot;dayNightSelectorColorNight&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Drop Down&quot;,
+          &quot;isShowing&quot;: &quot;isNightMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(87, 83, 78)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;LIGHT&quot;
+          }
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Day/Night Selector&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isDayNightSelectorShowing&quot;
+      }
+    },
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;callToActionTitle&quot;,
+          &quot;type&quot;: &quot;TEXTFIELD:V1&quot;,
+          &quot;label&quot;: &quot;Title&quot;,
+          &quot;placeholder&quot;: &quot;Contact&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;callToActionLink&quot;,
+          &quot;type&quot;: &quot;LINK_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Go To&quot;
+        },
+        {
+          &quot;prop&quot;: &quot;callToActionColorDay&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Button Color&quot;,
+          &quot;isShowing&quot;: &quot;isDayMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(228, 228, 231)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;DARK&quot;
+          }
+        },
+        {
+          &quot;prop&quot;: &quot;callToActionColorNight&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Button Color&quot;,
+          &quot;isShowing&quot;: &quot;isNightMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(39, 39, 42)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;LIGHT&quot;
+          }
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Call To Action&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isCallToActionShowing&quot;
+      }
+    },
+    {
+      &quot;data&quot;: [
+        {
+          &quot;prop&quot;: &quot;linkBoxColorDay&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Background&quot;,
+          &quot;isShowing&quot;: &quot;isDayMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(120, 113, 108)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;LIGHT&quot;
+          }
+        },
+        {
+          &quot;prop&quot;: &quot;linkBoxColorNight&quot;,
+          &quot;type&quot;: &quot;COLOR_SELECTION:V1&quot;,
+          &quot;label&quot;: &quot;Background&quot;,
+          &quot;isShowing&quot;: &quot;isNightMode&quot;,
+          &quot;defaultValue&quot;: {
+            &quot;color&quot;: &quot;rgb(120, 113, 108)&quot;,
+            &quot;suggestedTextColor&quot;: &quot;LIGHT&quot;
+          }
+        }
+      ],
+      &quot;type&quot;: &quot;CONTAINER:V1&quot;,
+      &quot;header&quot;: &quot;Link Boxes&quot;,
+      &quot;isShowing&quot;: {
+        &quot;prop&quot;: &quot;isLinkBoxShowing&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "data": [
+        {
+          "prop": "noticeTitle",
+          "type": "TEXTFIELD:V1",
+          "label": "Title",
+          "placeholder": "Important notice goes here."
+        },
+        {
+          "prop": "noticeLink",
+          "type": "LINK_SELECTION:V1",
+          "label": "Link"
+        },
+        {
+          "prop": "noticeColorDay",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isDayMode",
+          "defaultValue": {
+            "color": "rgb(228, 228, 231)",
+            "suggestedTextColor": "DARK"
+          }
+        },
+        {
+          "prop": "noticeColorNight",
+          "type": "COLOR_SELECTION:V1",
+          "label": "Background",
+          "isShowing": "isNightMode",
+          "defaultValue": {
+            "color": "rgb(39, 39, 42)",
+            "suggestedTextColor": "LIGHT"
+          }
+        }
+      ],
+      "type": "CONTAINER:V1",
+      "header": "Notice",
+      "isShowing": {
+        "prop": "isNoticeShowing"
+      }
+    }, -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-69Y4XFCKHB"></script>
+      
+        <script src="https://1001flextape.github.io/WebsiteRCM-Docs/scripts/load-google-analytics.js"></script>
+      
+    
+  </body>
+</html>
