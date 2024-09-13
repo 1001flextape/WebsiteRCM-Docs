@@ -22,7 +22,7 @@ The **React Component Manager** will use only one JSON file and one React compon
 2) The user enters the data into the form. <br />
 3) The answers from the user are used as props in the React component. <br />
 
-<img src="https://1001flextape.github.io/WebsiteRCM-Docs/images/rcm-life-cycle.png" alt="RCM life cycle" style="width: 100%;" />
+<img src="https://1001flextape.github.io/WebsiteRCM-Docs/images/rcm-life-cycle.png" alt="RCM life cycle" style="width: 100%;" /> 
 
 <!-- 
 ### What is a RCM
